@@ -11,6 +11,7 @@
   </head>
 
   <body>
+    <%= render AlertComponent.new(flash: flash) %>
     <%= yield %>
   </body>
 </html>
