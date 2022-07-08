@@ -1,0 +1,5 @@
+<%= turbo_frame_tag "posts" do %>
+  <% @posts.each do |post| %>
+    <%= render PostComponent.new(post: post) %>
+  <% end %>
+<% end %>

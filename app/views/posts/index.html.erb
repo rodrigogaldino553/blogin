@@ -3,9 +3,7 @@
 <h1>Posts</h1>
 
 <div id="posts">
-  <% @posts.each do |post| %>
-    <%= render PostComponent.new(post: post) %>
-  <% end %>
+  <%= render SearchPostComponent.new(posts: @posts) %>
 </div>
 
 <%= link_to "New post", new_post_path %>

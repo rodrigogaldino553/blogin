@@ -1,0 +1,11 @@
+<%= form_with(url: posts_path, method: "GET") do |form| %>
+  <div class="input-group mb-3">
+    <%= form.text_field :query, class: 'form-control', placeholder: 'Search for...', aria: { describedby:"basic-addon2" } %>
+    <%= form.submit 'Search', class:"input-group-text", id:"basic-addon2" %>
+  </div>
+<% end %>
+
+  <% if @search.present? %>
+    <h3>Results for <%= @search %></h3>
+  <% end %>
+<%= render "posts", posts: @posts %>
