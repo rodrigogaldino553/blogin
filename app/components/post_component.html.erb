@@ -5,11 +5,11 @@
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title"><%= link_to @post.title, @post %></h5>
+        <h5 class="card-title"><%= link_to @post.title, @post, method: :get, 'data-turbo': false %></h5>
         <p class="card-text"><%= @post.content %></p>
         <div class="w-full d-flex justify-content-between">
           <p class="card-text"><small class="text-muted"><%= time_ago_in_words(@post.created_at) %></small></p>
-          <%= link_to 'read more', @post %>
+          <%= link_to 'read more', @post, method: :get, 'data-turbo': false %>
         </div>
       </div>
     </div>
